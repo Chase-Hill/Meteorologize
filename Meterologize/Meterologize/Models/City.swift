@@ -8,8 +8,8 @@
 import Foundation
 
 class City {
-	let name: String
-	let currentTemp: Double
+	var name: String
+	var currentTemp: Double
 	let dailyHigh: Int?
 	let dailyLow: Int?
 	let currentStatus: String?
