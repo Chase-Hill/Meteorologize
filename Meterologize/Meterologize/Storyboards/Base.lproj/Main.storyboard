@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jVP-Sq-gGJ">
-                                <rect key="frame" x="153.66666666666666" y="134" width="86" height="70.666666666666686"/>
+                                <rect key="frame" x="153.66666666666666" y="178" width="86" height="70.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(city name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRB-bO-hi4">
                                         <rect key="frame" x="0.0" y="0.0" width="86" height="20.333333333333332"/>
@@ -34,7 +34,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="iwl-4V-nYa">
-                                <rect key="frame" x="113.00000000000001" y="325" width="167.33333333333337" height="20.333333333333314"/>
+                                <rect key="frame" x="113.00000000000001" y="369" width="167.33333333333337" height="20.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(high)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etH-A8-B3a">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="20.333333333333332"/>
@@ -51,7 +51,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(temp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVJ-mh-ZwC">
-                                <rect key="frame" x="171" y="254.66666666666666" width="51.333333333333343" height="20.333333333333343"/>
+                                <rect key="frame" x="171" y="298.66666666666669" width="51.333333333333343" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,6 +68,7 @@
                             <constraint firstItem="jVP-Sq-gGJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="gio-3y-QRM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4dg-Bt-fBr"/>
                     <connections>
                         <outlet property="cityNameLabel" destination="zRB-bO-hi4" id="uwy-br-x28"/>
                         <outlet property="currentStatusLabel" destination="v16-Xr-hh0" id="sQa-NL-EZm"/>
@@ -78,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-2"/>
+            <point key="canvasLocation" x="1060" y="687"/>
         </scene>
         <!--City List Table View Controller-->
         <scene sceneID="14A-9L-oet">
@@ -144,6 +145,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toDetailViewControllerr" id="Pae-7q-e4J"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
