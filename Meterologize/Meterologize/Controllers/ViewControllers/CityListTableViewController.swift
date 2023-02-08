@@ -18,6 +18,11 @@ class CityListTableViewController: UITableViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
 	// MARK: - Actions
 	@IBAction func addCityButtonTapped(_ sender: Any) {
 		guard let cityName = cityNameTextField.text, !cityName.isEmpty,

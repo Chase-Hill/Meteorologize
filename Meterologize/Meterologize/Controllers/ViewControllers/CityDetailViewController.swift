@@ -24,6 +24,14 @@ class CityDetailViewController: UIViewController {
     // MARK: - Properties
     var objectToRecieveTheDataFromOurPrepareForSegue: City?
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let city = objectToRecieveTheDataFromOurPrepareForSegue,
+              let newName = CityNameTextField.text,
+              let newTemp = CityTempTextField.text else {return}
+        CityController.sharedInstance.updateCity(cityToUpdate: city, newName: newName, newTemp: Double(newTemp) ?? 0.0)
+        navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +39,6 @@ class CityDetailViewController: UIViewController {
         updateViews()
     }
 
-    @IBAction func saveButtonTapped(_ sender: Any) {
-    }
     
 	// MARK: - Methods
 	func updateViews() {
